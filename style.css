@@ -1,0 +1,200 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+/* Proprietà generali della pagina */
+body{
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    font-size: 20px;
+    color: #2d2d2d;
+    background-color: white;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Dancing Script', cursive;
+}
+/* header e nav */
+header {
+    display: grid;
+    grid-template-columns: repeat(56, 1fr);
+    grid-template-rows: repeat(34, 1fr);
+    height: 100vh;
+}
+li {
+    font-family: 'Julius Sans One', sans-serif;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 800;
+    display: block;
+    text-align: center;
+}
+a {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(black, black);
+    background-size: 0 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+}
+.nav a:hover {
+    background-size: 100% 2px, auto;
+}
+li p {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0px auto;
+}
+header div {
+    mix-blend-mode: soft-light;
+}
+.background {
+    grid-column-start: 1;
+    grid-column-end: 57;
+    grid-row-start: 1;
+    grid-row-end: 35;
+    background: url(images/header_background.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    mix-blend-mode: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rectangle_1 {
+    grid-column-start: 23;
+    grid-column-end: 57;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    z-index: 0;
+    background-color: #BCBBBA;
+}
+.rectangle_2 {
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 35;
+    z-index: 1;
+    background-color: #E1D5C7;
+    mix-blend-mode: normal;
+}
+.rectangle_3 {
+    grid-column-start: 13;
+    grid-column-end: 30;
+    grid-row-start: 1;
+    grid-row-end: 12;
+    z-index: 2;
+    background-color: #F2D2B5;
+}
+.rectangle_4 {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 31;
+    grid-row-end: 35;
+    z-index: 3;
+    background-color: #F2D2B5;
+}
+.rectangle_5 {
+    grid-column-start: 1;
+    grid-column-end: 18;
+    grid-row-start: 24;
+    grid-row-end: 35;
+    z-index: 4;
+    background-color: #F2D2B5;
+}
+.rectangle_6 {
+    grid-column-start: 50;
+    grid-column-end: 57;
+    grid-row-start: 1;
+    grid-row-end: 35;
+    z-index: 5;
+    background-color: #F2D2B5;
+}
+.rectangle_7 {
+    grid-column-start: 1;
+    grid-column-end: 20;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    z-index: 6;
+    background-color: #F2D2B5;
+}
+.title {
+    background-color: black;
+    border: 4px solid white;
+    mix-blend-mode: normal;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.title h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 60px;
+    padding: 20px;
+    font-weight: lighter;
+}
+.title h2 {
+    font-size: 50px;
+    padding: 20px;
+    font-weight: lighter;
+    position: relative;
+}
+.title h2::before {
+    position: absolute;
+    content: '';
+    left:0;
+    top:0;
+    height: 3px;
+    width: 100%;
+    background: white;
+}
+.title img {
+    height: 35px;
+    width: auto;
+}
+.title span {
+    margin: 0px 20px;
+}
+nav {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 34;
+    z-index: 7;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+ul.nav {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 15;
+
+}
+.social li {
+    padding: 0px;
+}
+ul.social {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 15;
+    grid-row-end: 21;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.fab {
+    color: black;
+    font-size: 40px;
+}
