@@ -22,6 +22,7 @@ header {
     grid-template-columns: repeat(56, 1fr);
     grid-template-rows: repeat(34, 1fr);
     height: 100vh;
+    overflow: hidden;
 }
 li {
     font-family: 'Julius Sans One', sans-serif;
@@ -40,7 +41,7 @@ a {
     background-size: 0 2px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
-    transition: all .2s ease-out;
+    transition: all .5s ease-out;
 }
 .nav a:hover {
     background-size: 100% 2px, auto;
@@ -52,7 +53,7 @@ li p {
     border-radius: 50%;
     margin: 0px auto;
 }
-header div {
+.soft_light {
     mix-blend-mode: soft-light;
 }
 .background {
@@ -63,10 +64,14 @@ header div {
     background: url(images/header_background.jpg) no-repeat center center;
     background-size: cover;
     z-index: -1;
-    mix-blend-mode: normal;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn_from_right_2 1.5s 1 ease;
+}
+@keyframes fadeIn_from_right_2 {
+    0% {transform: translateX(10%);}
+    115% {transform: translateX(0px);}
 }
 .rectangle_1 {
     grid-column-start: 23;
@@ -75,6 +80,11 @@ header div {
     grid-row-end: 8;
     z-index: 0;
     background-color: #BCBBBA;
+    animation: fadeIn 2.5s 1 ease;
+}
+@keyframes fadeIn {
+    from {transform: translateY(-75%);}
+    to {transform: translateY(0px);}
 }
 .rectangle_2 {
     grid-column-start: 1;
@@ -83,7 +93,13 @@ header div {
     grid-row-end: 35;
     z-index: 1;
     background-color: #E1D5C7;
-    mix-blend-mode: normal;
+    animation: scale 2s 1 ease;
+    transform-origin: left
+}
+@keyframes scale {
+    0% {transform: scaleX(0.8);}
+    50% {transform: scaleX(1.1);}
+    100% {transform: scaleX(1);}
 }
 .rectangle_3 {
     grid-column-start: 13;
@@ -92,6 +108,11 @@ header div {
     grid-row-end: 12;
     z-index: 2;
     background-color: #F2D2B5;
+    animation: appear 1.5s 1 ease;
+}
+@keyframes appear {
+    from {opacity: 0}
+    to {opacity: 1}
 }
 .rectangle_4 {
     grid-column-start: 1;
@@ -100,6 +121,7 @@ header div {
     grid-row-end: 35;
     z-index: 3;
     background-color: #F2D2B5;
+    animation: appear 1.5s 1 ease;
 }
 .rectangle_5 {
     grid-column-start: 1;
@@ -108,6 +130,11 @@ header div {
     grid-row-end: 35;
     z-index: 4;
     background-color: #F2D2B5;
+    animation: fadeIn_from_left 1.5s 1 ease;
+}
+@keyframes fadeIn_from_left {
+    from {transform: translateX(-75%);}
+    to {transform: translateX(0px);}
 }
 .rectangle_6 {
     grid-column-start: 50;
@@ -116,6 +143,11 @@ header div {
     grid-row-end: 35;
     z-index: 5;
     background-color: #F2D2B5;
+    animation: fadeIn_from_right 1.5s 1 ease;
+}
+@keyframes fadeIn_from_right {
+    0% {transform: translateX(75%);}
+    75% {transform: translateX(0px);}
 }
 .rectangle_7 {
     grid-column-start: 1;
@@ -124,17 +156,29 @@ header div {
     grid-row-end: 6;
     z-index: 6;
     background-color: #F2D2B5;
+    animation: fadeIn_from_bottom 2.5s 1 ease;
+}
+@keyframes fadeIn_from_bottom {
+    0% {transform: translateY(25%);}
+    50% {transform: translateY(-15%);}
+    100% {transform: translateY(0);}
 }
 .title {
     background-color: black;
     border: 4px solid white;
-    mix-blend-mode: normal;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px;
+    animation: fadeIn_from_left_2 2.5s 1 ease;
+}
+@keyframes fadeIn_from_left_2 {
+    0% {transform: translateX(-25%) translateY(20%); opacity: 0}
+    35% {opacity: 1}
+    50% {transform: translateX(2%) translateY(0%); opacity: 1}
+    100% {transform: translateX(0px) translateY(0); opacity: 1}
 }
 .title h1 {
     font-family: 'Julius Sans One', sans-serif;
@@ -164,6 +208,17 @@ header div {
 .title span {
     margin: 0px 20px;
 }
+/*.title {
+    overflow: hidden;
+    animation-name: grow;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}
+@keyframes grow {
+    from {transform: scaleX(0)}
+    to {transform: scaleX(1)}
+}*/
 nav {
     grid-column-start: 2;
     grid-column-end: 10;
@@ -286,10 +341,10 @@ article.preview_about figure {
     padding: 45px;
     color: white;
 }
-button span, li span {
+a span {
     display: inline-block;
 }
-a:hover span, li:hover span  {
+a:hover span, button:hover span {
     animation: bounce 0.4s ease;
 } 
 @keyframes bounce { 
