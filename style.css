@@ -199,20 +199,90 @@ ul.social {
     font-size: 40px;
 }
 main {
-    
+    position: relative;
+}
+main:after {
+    content:'';
+    position: absolute;
+    background-color: #ECECEC;
+    top: 0;
+    left: 44%;
+    height: 100%;
+    width: 56%;
+    z-index: -1;
+}
+main:before {
+    content:'';
+    position: absolute;
+    background-color: #fefefe;
+    top: 0;
+    left: 0;
+    width: 44%;
+    height: 100%;
+    z-index: -1;
 }
 section {
-    margin: 100px 250px;
+    margin: 0px 20%;
+    padding: 75px 0px;
 }
 button {
     outline: none;
     font-family: 'Dancing Script', cursive;
-    font-size: 40px;
+    font-size: 28px;
     padding: 10px 30px;
     background-color: white;
-    border: 4px solid black;
+    border: 2px solid black;
+    margin: 0px auto;
+    display: block;
 }
+button:hover {
+    background-color: rgb(119, 119, 119);
+}
+
 article.preview_about {
-    margin: 100px 0px;
+    margin: 75px 0px;
     display: flex;
+}
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+article.preview_about figure {
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+}
+.text_about {
+    width: 50%;
+    border: 1px solid black;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.text_about h2 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.text_about span {
+    position: relative;
+    padding: 45px;
+    display: inline-block;
+}
+.text_about span:after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 100%;
+    height: 2px;
+    width: 100%;
+}
+.text_about div {
+    font-size: 15px;
+    padding: 45px;
+    color: white;
 }
