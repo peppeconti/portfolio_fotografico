@@ -1,0 +1,22 @@
+{
+  "name": "portfolio_fotografico",
+  "version": "1.0.0",
+  "description": "portfolio Ornella Mazzola",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peppeconti/portfolio_fotografico.git"
+  },
+  "author": "Giuseppe Conti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peppeconti/portfolio_fotografico/issues"
+  },
+  "homepage": "https://github.com/peppeconti/portfolio_fotografico#readme",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
+}
