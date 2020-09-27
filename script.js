@@ -1,6 +1,9 @@
 
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
+    'use strict'; 
+
+AOS.init();    
 
 // calculates the actual width of the figure after loading and sets heigth equal to it
 
@@ -23,7 +26,6 @@ letters_container_array.forEach((e) => {
         delay = delay + 0.05;
     })
 });
-
 });
 
 // sets heigth equal to width on resize

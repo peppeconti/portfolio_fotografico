@@ -12,6 +12,9 @@ body{
     font-size: 20px;
     color: #2d2d2d;
     background-color: white;
+    /* in order to avoid conflicts between animations
+    and mix-blend-mode property in children elements => */
+    mix-blend-mode: multiply;
 }
 h1, h2, h3, h4, h5{
     font-family: 'Dancing Script', cursive;
@@ -23,6 +26,8 @@ header {
     grid-template-rows: repeat(34, 1fr);
     height: 100vh;
     overflow: hidden;
+    /* in order to avoid conflicts between animations
+    and mix-blend-mode property in children elements => */ mix-blend-mode: multiply;
 }
 li {
     font-family: 'Julius Sans One', sans-serif;
@@ -67,18 +72,18 @@ li p {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn_from_right_2 1.5s 1 ease;
+    animation: fadeIn_from_right_2 2.5s 1 ease;
 }
 @keyframes fadeIn_from_right_2 {
     0% {transform: translateX(10%);}
-    115% {transform: translateX(0px);}
+    100% {transform: translateX(0px);}
 }
 .rectangle_1 {
     grid-column-start: 23;
     grid-column-end: 57;
     grid-row-start: 1;
     grid-row-end: 8;
-    z-index: 0;
+    z-index: 2;
     background-color: #BCBBBA;
     animation: fadeIn 2.5s 1 ease;
 }
@@ -91,7 +96,7 @@ li p {
     grid-column-end: 11;
     grid-row-start: 1;
     grid-row-end: 35;
-    z-index: 1;
+    z-index: 0;
     background-color: #E1D5C7;
     animation: scale 2s 1 ease;
     transform-origin: left
@@ -224,7 +229,7 @@ nav {
     grid-column-end: 10;
     grid-row-start: 5;
     grid-row-end: 34;
-    z-index: 7;
+    z-index: 0;
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
