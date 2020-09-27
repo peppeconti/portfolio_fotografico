@@ -5,9 +5,9 @@ window.addEventListener('load', () => {
 // calculates the actual width of the figure after loading and sets heigth equal to it
 
 let about_preview = document.querySelector('.preview_about figure');
-let actual_width = about_preview.getBoundingClientRect().width;
-// console.log(actual_width);
-about_preview.style.height = `${actual_width}px`;
+let actual_width = window.getComputedStyle(about_preview).width;
+console.log(actual_width);
+about_preview.style.height = `${actual_width}`;
 
 // add  incremental animation-delay to span element 
 
@@ -30,7 +30,7 @@ letters_container_array.forEach((e) => {
 
 window.addEventListener('resize', () => {
     let about_preview = document.querySelector('.preview_about figure');
-    let actual_width = about_preview.getBoundingClientRect().width;
-    // console.log(actual_width);
-    about_preview.style.height = `${actual_width}px`;
+    let actual_width = window.getComputedStyle(about_preview).width;
+    console.log(actual_width);
+    about_preview.style.height = `${actual_width}`;
 });
