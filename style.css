@@ -278,7 +278,11 @@ main:before {
 }
 section {
     margin: 0px 20%;
-    padding: 75px 0px;
+    padding-top: 75px;
+}
+section#galleries {
+    padding-bottom: 75px;
+    height: auto;
 }
 button {
     outline: none;
@@ -295,7 +299,7 @@ button {
     background-color: rgb(119, 119, 119);
 }*/
 article.preview_about {
-    margin: 75px 0px;
+    padding: 75px 0px;
     display: flex;
 }
 figure img {
@@ -341,12 +345,103 @@ article.preview_about figure {
     padding: 45px;
     color: white;
 }
+article.preview_galleries {
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+    grid-template-rows: repeat(17, 1fr) ;
+    grid-gap: 20px ;
+    padding: 75px 0px;
+    height: 180vh;
+}
+.preview_galleries div {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1 ;
+    grid-row-end: 8;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.preview_galleries div h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    padding: 10px;
+}
+.preview_galleries div:after {
+    content:'';
+    position: absolute;
+    background-color: #ECECEC;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+}
+.preview_galleries div:before {
+    content:'';
+    position: absolute;
+    background-color: #fefefe;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+}
+.preview_galleries div h2 span {
+    padding: 2px;
+}
+.figure_1 {
+    grid-column-start: 6;
+    grid-column-end: 15;
+    grid-row-start: 1;
+    grid-row-end: 8;
+}
+.figure_2 {
+    grid-column-start: 15;
+    grid-column-end: 20;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.figure_3 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 8;
+    grid-row-end: 18;
+}
+.figure_4 {
+    grid-column-start: 6;
+    grid-column-end: 15;
+    grid-row-start: 8;
+    grid-row-end: 12;
+}
+.figure_5 {
+    grid-column-start: 15;
+    grid-column-end: 20;
+    grid-row-start: 5;
+    grid-row-end: 12;
+}
+.figure_6 {
+    grid-column-start: 6;
+    grid-column-end: 20;
+    grid-row-start: 12;
+    grid-row-end: 18;
+}
 a span {
     display: inline-block;
 }
 a:hover span, button:hover span {
     animation: bounce 0.4s ease;
-} 
+}
+footer {
+    height: 50vh;
+    background-color: #2d2d2d;
+}
 @keyframes bounce { 
     0% {-webkit-transform: translateY(0);}
     50% {-webkit-transform: translateY(-10px);}
