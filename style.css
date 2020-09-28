@@ -6,9 +6,24 @@
     font-size: 100%;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Light.ttf);
+  }
+@font-face {
+    font-family: JuliusOne;
+    src: url(fonts/JuliusSansOne-Regular.ttf);
+  }
+@font-face {
+    font-family: Dancing;
+    src: url(fonts/DancingScript-VariableFont_wght.ttf);
+  }    
+
+
 /* Proprietà generali della pagina */
 body{
-    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    font-family: Montserrat;
     font-size: 20px;
     color: #2d2d2d;
     background-color: white;
@@ -17,7 +32,7 @@ body{
     mix-blend-mode: multiply;
 }
 h1, h2, h3, h4, h5{
-    font-family: 'Dancing Script', cursive;
+    font-family: Dancing;
 }
 /* header e nav */
 header {
@@ -30,7 +45,7 @@ header {
     and mix-blend-mode property in children elements => */ mix-blend-mode: multiply;
 }
 li {
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: JuliusOne;
     list-style: none;
     text-align: center;
     font-size: 20px;
@@ -186,7 +201,7 @@ li p {
     100% {transform: translateX(0px) translateY(0); opacity: 1}
 }
 .title h1 {
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: JuliusONe;
     font-size: 60px;
     padding: 20px;
     font-weight: lighter;
@@ -291,7 +306,7 @@ section#galleries {
 }
 button {
     outline: none;
-    font-family: 'Dancing Script', cursive;
+    font-family: Dancing;
     font-size: 28px;
     padding: 10px 30px;
     background-color: white;
@@ -370,7 +385,7 @@ article.preview_galleries {
     position: relative;
 }
 .preview_galleries div h2 {
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: JuliusOne;
     display: flex;
     justify-content: center;
     align-items: center;
