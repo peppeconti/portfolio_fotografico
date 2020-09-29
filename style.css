@@ -43,7 +43,6 @@ header {
     overflow: hidden;
     /* in order to avoid conflicts between animations
     and mix-blend-mode property in children elements => */ mix-blend-mode: multiply;
-    z-index: -1;
 }
 li {
     font-family: JuliusOne;
