@@ -23,18 +23,18 @@
 <body>
     <header>
         <div class="background">
-            <div class="title">
+            <div class="title lax" data-lax-preset="fadeOut">
                 <h1>OrnellaMazzola</h1>
                 <h2><span>Photographer</span><span><img src="images/camera_icon.svg" alt="icon camera"></span></h2>
             </div>
         </div>
-        <div class="rectangle_1 soft_light"></div>
-        <div class="rectangle_2"></div>
-        <div class="rectangle_3 soft_light"></div>
-        <div class="rectangle_4 soft_light"></div>
-        <div class="rectangle_5 soft_light"></div>
-        <div class="rectangle_6 soft_light"></div>
-        <div class="rectangle_7 soft_light"></div>
+        <div class="rectangle_1 soft_light lax" ></div>
+        <div class="rectangle_2 lax"></div>
+        <div class="rectangle_3 soft_light lax" data-lax-preset="fadeOut" data-lax-translate-y="vh 0, -200 (vw*0.2)" data-lax-anchor="#about"></div>
+        <div class="rectangle_4 soft_light lax" data-lax-preset="fadeOut"></div>
+        <div class="rectangle_5 soft_light lax" data-lax-preset="rightToLeft" data-lax-anchor="#about"></div>
+        <div class="rectangle_6 soft_light lax" data-lax-preset="leftToRight" data-lax-anchor="#about"></div>
+        <div class="rectangle_7 soft_light lax" data-lax-preset="fadeOut"></div>
         <nav>
             <ul class="nav">
                 <li><a class="bounce" href="about.html"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></a></li>
@@ -94,6 +94,7 @@
 
         </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>

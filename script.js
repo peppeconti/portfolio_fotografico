@@ -5,6 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 AOS.init();    
 
+// lax.js initilizatiion
+
+window.onload = function() {
+	lax.setup() // init
+
+	const updateLax = () => {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+
+	window.requestAnimationFrame(updateLax)
+}
+
+/**** selfmade javascript - no libraries ****/
+
 // calculates the actual width of the figure after loading and sets heigth equal to it
 
 let about_preview = document.querySelector('.preview_about figure');
