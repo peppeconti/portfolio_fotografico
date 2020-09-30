@@ -30,6 +30,7 @@ body{
     /* in order to avoid conflicts between animations
     and mix-blend-mode property in children elements => */
     mix-blend-mode: multiply;
+    scroll-behavior: smooth;
 }
 h1, h2, h3, h4, h5{
     font-family: Dancing;
@@ -523,12 +524,29 @@ footer {
         padding: 30px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     section {
         margin: 0px 10%;
-        height: 60vh;
     }
     header {
-        height: 40vh;
+        height: 45vh;
+    }
+    .title {
+        padding: 20px;
+    }
+    .rectangle_1 {
+        grid-row-end: 6;
+    }
+    .rectangle_2 {
+        grid-column-end: 9;
+    }
+    .rectangle_3 {
+        grid-row-end: 9;
+    }
+    nav {
+        grid-column-end: 8;
+    }
+    li {
+        font-size: 15px;
     }
 }

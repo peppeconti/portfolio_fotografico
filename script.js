@@ -8,7 +8,9 @@ AOS.init();
 // lax.js initilizatiion
 
 window.onload = function() {
-	lax.setup() // init
+	lax.setup({
+        breakpoints: { small: 0, large: 1125 }
+    }) // init
 
 	const updateLax = () => {
 		lax.update(window.scrollY)
