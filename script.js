@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 AOS.init();    
 
-// lax.js initilizatiion
+// lax.js init
 
 window.onload = function() {
-	lax.setup({
-        breakpoints: { small: 0, large: 1125 }
-    }) // init
+	lax.setup()
 
 	const updateLax = () => {
 		lax.update(window.scrollY)
