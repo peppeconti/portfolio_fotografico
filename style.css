@@ -40,7 +40,7 @@ header {
     display: grid;
     grid-template-columns: repeat(56, 1fr);
     grid-template-rows: repeat(34, 1fr);
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     /* in order to avoid conflicts between animations
     and mix-blend-mode property in children elements => */ mix-blend-mode: multiply;
@@ -373,7 +373,7 @@ article.preview_galleries {
     grid-template-rows: repeat(17, 1fr) ;
     grid-gap: 20px ;
     padding: 75px 0px;
-    height: 180vh;
+    height: 1100px;
 }
 .preview_galleries div {
     grid-column-start: 1;
@@ -474,6 +474,10 @@ footer {
     50% {transform: translateY(-10px);}
     100% {transform: translateY(0px);}
   } 
+
+
+/* Media Queries */
+  
 @media screen and (max-width: 1300px) {
     section {
         margin: 0px 19%;
@@ -524,12 +528,15 @@ footer {
         padding: 30px;
     }
 }
+
+/* Setting for iPad Pro */
+
 @media screen and (max-width: 1024px) {
     section {
         margin: 0px 10%;
     }
     header {
-        height: 45vh;
+        min-height: 45vh;
     }
     .title {
         padding: 20px;
@@ -556,4 +563,17 @@ footer {
     li {
         font-size: 15px;
     }
+    article.preview_galleries {
+        height: 1200px;
+    }
+    footer {
+      height: 25vh;  
+    }
+}
+
+/* Setting for iPad Pro */
+
+@media screen and (max-width: 768px) {
+
+
 }
