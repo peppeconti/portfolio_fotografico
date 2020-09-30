@@ -535,13 +535,20 @@ footer {
         padding: 20px;
     }
     .rectangle_1 {
-        grid-row-end: 6;
+        grid-row-end: 7;
     }
     .rectangle_2 {
         grid-column-end: 9;
     }
     .rectangle_3 {
         grid-row-end: 9;
+    }
+    .rectangle_4 {
+        grid-column-end: 6;
+        grid-row-start: 32;
+    }
+    .rectangle_7 {
+        grid-row-end: 5;
     }
     nav {
         grid-column-end: 8;
