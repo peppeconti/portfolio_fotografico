@@ -3,35 +3,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     'use strict'; 
 
-AOS.init();    
-
-// lax.js init
-
-window.onload = function() {
-	lax.setup()
-
-	const updateLax = () => {
-		lax.update(window.scrollY)
-		window.requestAnimationFrame(updateLax)
-	}
-
-	window.requestAnimationFrame(updateLax)
-}
-
 /**** selfmade javascript - no libraries ****/
 
 // calculates the actual width of the figure after loading and sets heigth equal to it
 
 let about_preview = document.querySelector('.preview_about figure');
 let actual_width = window.getComputedStyle(about_preview).width;
-console.log(actual_width);
+// console.log(actual_width);
 about_preview.style.height = `${actual_width}`;
+
+// sets heigth equal to width on resize
+
+window.addEventListener('resize', () => {
+    let about_preview = document.querySelector('.preview_about figure');
+    let actual_width = window.getComputedStyle(about_preview).width;
+    // console.log(actual_width);
+    about_preview.style.height = `${actual_width}`;
+});
+
+/*** BOUNCING LETTERS ***/
 
 // add  incremental animation-delay to span element 
 
 let letters_container = document.querySelectorAll('.bounce');
 let letters_container_array = Array.from(letters_container);
-console.log(letters_container_array);
+// console.log(letters_container_array);
 letters_container_array.forEach((e) => {
     let letters = e.children;
     let letters_array = Array.from(letters);
@@ -41,13 +37,4 @@ letters_container_array.forEach((e) => {
         delay = delay + 0.05;
     })
 });
-});
-
-// sets heigth equal to width on resize
-
-window.addEventListener('resize', () => {
-    let about_preview = document.querySelector('.preview_about figure');
-    let actual_width = window.getComputedStyle(about_preview).width;
-    console.log(actual_width);
-    about_preview.style.height = `${actual_width}`;
 });
