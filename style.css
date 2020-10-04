@@ -481,11 +481,22 @@ a:hover span, button:hover span {
     grid-template-rows: repeat(11, 1fr);
     height: 100%;
 }
-#hamb_menu ul li, #hamb_menu ul p {
+#hamb_menu ul li {
     margin: 0;
     padding: 0;
     font-size: 40px;
     font-weight: 100;
+}
+#hamb_menu ul div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#hamb_menu ul p.circle {
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
 }
 #hamb_menu ul a {
     color: white;
