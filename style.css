@@ -273,7 +273,7 @@ ul.social {
 }
 .fab {
     color: black;
-    font-size: 40px;
+    font-size: 36px;
 }
 main {
     position: relative;
@@ -560,11 +560,44 @@ footer {
 /* Setting for iPad Pro */
 
 @media screen and (max-width: 1024px) {
+    .rectangle_2 {
+        grid-column-end: 5;
+    }
+    nav {
+        grid-column-start: 1;
+        grid-column-end: 57;
+        grid-row-start: 30;
+        grid-row-end: 34;
+        display: flex;
+        justify-content: center;
+    }
+    .nav {
+        display: none;
+    }
+    nav ul.social {
+        flex-direction: row;
+        grid-column-start: none;
+        grid-column-end: none;
+        grid-row-start: none;
+        grid-row-end: none;
+        justify-content: center;
+        width: 100%;
+    }
+    nav ul.social li {
+        padding: 0px 10px;
+    }
+    @keyframes fadeIn_from_right_2 {
+        0% {transform: translateX(2.5s);}
+        100% {transform: translateX(0px);}
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
     section {
         margin: 0px 10%;
     }
     header {
-        min-height: 45vh;
+        min-height: 50vh;
     }
     .title {
         padding: 20px;
@@ -595,13 +628,59 @@ footer {
         height: 1200px;
     }
     footer {
-      height: 25vh;  
+        height: 25vh;  
+    }
+    .fab {
+        font-size: 28px;
     }
 }
-
 /* Setting for iPad */
 
 @media screen and (max-width: 960px) {
-
-
+    header {
+        min-height: 50vh;
+    }
+    .rectangle_2 {
+        grid-column-end: 4;
+    }
+    .rectangle_5 {
+        grid-column-end: 22;
+        grid-row-start: 29;
+    }
+    .title {
+        padding: 5px;
+    }
+    .title h1 {
+        font-size: 50px;
+    }
+    .title h2 {
+        font-size: 38px;
+    }
+    nav {
+        grid-column-start: 1;
+        grid-column-end: 57;
+        grid-row-start: 30;
+        grid-row-end: 34;
+        display: flex;
+        justify-content: center;
+    }
+    .nav {
+        display: none;
+    }
+    nav ul.social {
+        flex-direction: row;
+        grid-column-start: none;
+        grid-column-end: none;
+        grid-row-start: none;
+        grid-row-end: none;
+        justify-content: center;
+        width: 100%;
+    }
+    nav ul.social li {
+        padding: 0px 10px;
+    }
+    @keyframes fadeIn_from_right_2 {
+        0% {transform: translateX(2.5s);}
+        100% {transform: translateX(0px);}
+    }
 }
