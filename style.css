@@ -31,17 +31,19 @@ body{
     and mix-blend-mode property in children elements => */
     mix-blend-mode: multiply;
     scroll-behavior: smooth;
+    position: relative;
 }
 h1, h2, h3, h4, h5{
     font-family: Dancing;
 }
 /* header e nav */
-header {
+header#top {
     display: grid;
     grid-template-columns: repeat(56, 1fr);
     grid-template-rows: repeat(34, 1fr);
     min-height: 100vh;
     overflow: hidden;
+    position: relative;
     /* in order to avoid conflicts between animations
     and mix-blend-mode property in children elements => */ mix-blend-mode: multiply;
 }
@@ -63,6 +65,7 @@ a {
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .5s ease-out;
+    cursor: pointer;
 }
 .nav a:hover {
     background-size: 100% 2px, auto;
@@ -241,7 +244,7 @@ li p {
     from {transform: scaleX(0)}
     to {transform: scaleX(1)}
 }*/
-nav {
+nav#desktop {
     grid-column-start: 2;
     grid-column-end: 10;
     grid-row-start: 5;
@@ -460,6 +463,33 @@ a span {
 a:hover span, button:hover span {
     animation: bounce 0.4s ease;
 }
+/* hamburger menu */
+
+#hamb_menu {
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 0;
+}
+#hamb_menu ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, 1fr);
+    height: 100%;
+}
+#hamb_menu ul li, #hamb_menu ul p {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 100;
+}
+#hamb_menu ul a {
+    color: white;
+}
 footer {
     height: 50vh;
     background-color: #2d2d2d;
@@ -563,7 +593,7 @@ footer {
     .rectangle_2 {
         grid-column-end: 5;
     }
-    nav {
+    nav#desktop {
         grid-column-start: 1;
         grid-column-end: 57;
         grid-row-start: 30;
@@ -574,7 +604,7 @@ footer {
     .nav {
         display: none;
     }
-    nav ul.social {
+    nav#desktop ul.social {
         flex-direction: row;
         grid-column-start: none;
         grid-column-end: none;
@@ -583,7 +613,7 @@ footer {
         justify-content: center;
         width: 100%;
     }
-    nav ul.social li {
+    nav#desktop ul.social li {
         padding: 0px 10px;
     }
     @keyframes fadeIn_from_right_2 {
@@ -596,7 +626,7 @@ footer {
     section {
         margin: 0px 10%;
     }
-    header {
+    header#top {
         min-height: 50vh;
     }
     .title {
@@ -618,7 +648,7 @@ footer {
     .rectangle_7 {
         grid-row-end: 5;
     }
-    nav {
+    nav#desktop {
         grid-column-end: 8;
     }
     li {
@@ -637,7 +667,7 @@ footer {
 /* Setting for iPad */
 
 @media screen and (max-width: 960px) {
-    header {
+    header#top {
         min-height: 50vh;
     }
     .rectangle_2 {
@@ -656,7 +686,7 @@ footer {
     .title h2 {
         font-size: 38px;
     }
-    nav {
+    nav#desktop {
         grid-column-start: 1;
         grid-column-end: 57;
         grid-row-start: 30;
@@ -667,7 +697,7 @@ footer {
     .nav {
         display: none;
     }
-    nav ul.social {
+    nav#desktop ul.social {
         flex-direction: row;
         grid-column-start: none;
         grid-column-end: none;
@@ -676,7 +706,7 @@ footer {
         justify-content: center;
         width: 100%;
     }
-    nav ul.social li {
+    nav#desktop ul.social li {
         padding: 0px 10px;
     }
     @keyframes fadeIn_from_right_2 {
