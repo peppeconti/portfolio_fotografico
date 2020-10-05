@@ -42,8 +42,8 @@ header#top {
     grid-template-columns: repeat(56, 1fr);
     grid-template-rows: repeat(34, 1fr);
     min-height: 100vh;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
     /* in order to avoid conflicts between animations
     and mix-blend-mode property in children elements => */ mix-blend-mode: multiply;
 }
@@ -280,6 +280,7 @@ ul.social {
 }
 main {
     position: relative;
+    z-index: 0;
 }
 main:after {
     content:'';
@@ -304,6 +305,7 @@ main:before {
 section {
     margin: 0px 20%;
     padding-top: 75px;
+    z-index:0;
 }
 section#galleries {
     padding-bottom: 75px;
@@ -467,7 +469,7 @@ a:hover span, button:hover span {
 
 #hamb_menu {
     content: '';
-    height: 100%;
+    height: 100vh;
     position: absolute;
     width: 100%;
     top: 0;
@@ -479,13 +481,18 @@ a:hover span, button:hover span {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(11, 1fr);
-    height: 100%;
+    height: 100vh;
 }
-#hamb_menu ul li {
+#hamb_menu ul li, #hamb_menu ul div {
     margin: 0;
     padding: 0;
     font-size: 40px;
     font-weight: 100;
+    background-color: grey;
+    transform: translateX(-102%);
+}
+.goes_in {
+    transform: translateX(0)!important;
 }
 #hamb_menu ul div {
     display: flex;
@@ -501,6 +508,28 @@ a:hover span, button:hover span {
 #hamb_menu ul a {
     color: white;
 }
+#button_menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 30px;
+    z-index: 11;
+
+}
+#button_menu span {
+    position: static;
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 80px;
+}
+#button_menu :nth-child(1) {
+    margin-bottom: 10px;
+}
+#button_menu :nth-child(3) {
+    margin-top: 10px;
+}
 footer {
     height: 50vh;
     background-color: #2d2d2d;
@@ -515,6 +544,25 @@ footer {
     50% {transform: translateY(-10px);}
     100% {transform: translateY(0px);}
   }
+
+/** Page About **/
+
+header.small {
+    min-height: 40vh;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(56, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+}
+.background_about {
+    grid-column-start: 1;
+    grid-column-end: 57;
+    grid-row-start: 1;
+    grid-row-end: 18;
+    background: url(images/background_about.png) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
 
 /* Media Queries */
 
