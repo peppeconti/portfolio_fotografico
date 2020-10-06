@@ -7,7 +7,6 @@ export const set_height = () => {
     // console.log(actual_width);
     about_preview.style.height = `${actual_width}`;
 
-
 // sets heigth equal to width on resize
 
 window.addEventListener('resize', () => {
