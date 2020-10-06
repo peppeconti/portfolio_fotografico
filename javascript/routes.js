@@ -25,7 +25,6 @@ export const router = () => {
 
   if (typeof route !== 'undefined') {
     document.querySelector('#app').innerHTML = route.template.html();
-
     // l'afterRender è dentro un setTimeout perché in questo modo viene spostato nella coda secondaria di JS (quella degli eventi) quindi eseguito solo dopo che il DOM ha concluso le sue renderizzazioni.
     // è una sorta di hack per aggirare il problema, perché non esiste un evento del DOM che notifichi il rendering di una singola porzione del documento
     setTimeout(route.template.afterRender);
