@@ -20,6 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
         //e.style.opacity = '0.5';
     })
 
+    window.addEventListener('resize', () => {
+            let width = window.innerWidth;
+            // console.log(width);
+        if (width > 1023) {
+            container.style.zIndex = '-2';
+            array_from_ul.forEach(e => {
+                e.style.transition = `0s`;
+                e.classList.remove('goes_in')
+            })
+        }
+    })
+
     button.addEventListener('click', (evt) => {
         if (container.style.zIndex !== '10') {
             container.style.zIndex = '10';
@@ -37,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 delay = delay + 0.1;
                 e.classList.remove('goes_in')
             })
-            console.log(delay)
+            // console.log(delay)
             setTimeout(function(){
                 container.style.zIndex = '-2';
             }, delay*1000);
