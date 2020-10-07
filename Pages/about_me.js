@@ -1,4 +1,4 @@
-import * as equal from '/javascript/equal_height.js';  
+import * as equal_height from '/javascript/equal_height.js';  
 
 export const html = () => /*html*/ `
 <div class="about_foto_title square">
@@ -24,7 +24,7 @@ export const html = () => /*html*/ `
 `;
 
 export const afterRender = () => {
-    equal.set_height();
+    equal_height.set_height();
 }
 
 

@@ -459,9 +459,9 @@ article.preview_galleries {
 a span {
     display: inline-block;
 }
-a:hover span, button:hover span {
+/*a:hover span, button:hover span {
     animation: bounce 0.4s ease;
-}
+}*/
 /* hamburger menu */
 
 #hamb_menu {
@@ -611,6 +611,14 @@ header.small {
     align-items: center;
     padding-bottom: 75px;
 }
+
+.routing a:hover {
+    background-size: 100% 2px, auto;
+}
+.arrows p:hover {
+    animation: bounce 0.4s ease;
+}
+
 span.ellisse {
     height: 15px;
     width: 40px;

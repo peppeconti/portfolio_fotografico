@@ -1,3 +1,3 @@
-import * as equal from './equal_height.js';
+import * as equal_height from './equal_height.js';
 
-equal.set_height();
+equal_height.set_height();

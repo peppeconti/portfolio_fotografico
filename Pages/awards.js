@@ -1,3 +1,5 @@
+import * as equal_height from '/javascript/equal_height.js'; 
+
 export const html = () => /*html*/ `
 <div class="about_foto_title square">
 <figure class="round">
@@ -16,24 +18,11 @@ export const html = () => /*html*/ `
 <p>Fusce vehicula justo orci, a ultricies eros pretium a. Vivamus orci orci, consectetur ut nulla quis, tincidunt pulvinar arcu. Aenean eu nibh eu ligula blandit ullamcorper. Pellentesque ut metus id nisi volutpat porttitor ut a dui. Mauris vitae vehicula quam. Pellentesque diam augue, consequat eget auctor nec, fringilla malesuada est. Nam bibendum, libero quis egestas suscipit, turpis ipsum vulputate lacus, et rutrum dui nisl sit amet erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 <div class="arrows">
+<p><a href="#/curriculum">Curriculum<span class="fas fa-angle-double-left"></span></a></p>
 <p></p>
-<p><a href="#/curriculum"><span class="fas fa-angle-double-right"></span>Curriculum</a></p>
 </div>
 `;
 
 export const afterRender = () => {
-  let about_preview = document.querySelector('.square figure');
-  let actual_width = window.getComputedStyle(about_preview).width;
-  // console.log(actual_width);
-  about_preview.style.height = `${actual_width}`;
-
-
-// sets heigth equal to width on resize
-
-window.addEventListener('resize', () => {
-  let about_preview = document.querySelector('.square figure');
-  let actual_width = window.getComputedStyle(about_preview).width;
-  // console.log(actual_width);
-  about_preview.style.height = `${actual_width}`;
-});
+  equal_height.set_height();
 }
