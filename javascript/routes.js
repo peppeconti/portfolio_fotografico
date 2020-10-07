@@ -1,6 +1,6 @@
-import * as About_me from '../Pages/about_me.js';
-import * as Curriculum from '../Pages/curriculum.js';
-import * as Awards from '../Pages/awards.js';
+import * as About_me from '../pages_about/about_me.js';
+import * as Curriculum from '../pages_about/curriculum.js';
+import * as Awards from '../pages_about/awards.js';
 
 const routers = [{
     name: 'About_me',
