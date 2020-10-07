@@ -507,8 +507,8 @@ a span {
 }
 #button_menu {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     width: 40px;
     height: 30px;
     z-index: 11;
@@ -622,6 +622,21 @@ header.small {
 }
 .nav_two ul .ellisse {
     background-color: white;
+}
+.logo img {
+    width: auto;
+    height: 35px;
+    margin: 0px 20px;
+}
+.logo_responsive {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: none;
+}
+.logo_responsive img {
+    height: 40px;
+    width: auto;
 }
 .routing span{
     font-family: Dancing;
@@ -856,6 +871,23 @@ figure.round {
     footer {
         height: 250px;
     }
+    #button_menu {
+        display: block;
+    }
+    .nav_two {
+        display: none;
+    }
+    .logo_responsive {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: block;
+        z-index: 10;
+    }
+    .logo_responsive img {
+        height: 40px;
+        width: auto;
+    }
 
 }
 
@@ -956,7 +988,26 @@ figure.round {
         0% {transform: translateX(2.5s);}
         100% {transform: translateX(0px);}
     }
+    .logo img {
+        width: auto;
+        height: 27px;
+        margin: 0px 20px;
+    }
     #button_menu {
         display: block;
+    }
+    .nav_two {
+        display: none;
+    }
+    .logo_responsive {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: block;
+        z-index: 10;
+    }
+    .logo_responsive img {
+        height: 40px;
+        width: auto;
     }
 }
