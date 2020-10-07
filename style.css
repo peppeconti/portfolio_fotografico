@@ -528,7 +528,7 @@ a span {
     margin-top: 10px;
 }
 footer {
-    height: 50vh;
+    height: 300px;
     background-color: #2d2d2d;
 }
 @keyframes bounce { 
@@ -600,6 +600,28 @@ header.small {
     background-color: #1B1918;
     z-index: 8;
     opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_two div {
+    border-color: white;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.nav_two ul {
+    display: flex;
+}
+.nav_two ul li a {
+    color: white;
+    transition: none;
+}
+.nav_two ul li {
+    padding: 0;
+    margin: auto 30px;
+}
+.nav_two ul .ellisse {
+    background-color: white;
 }
 .routing span{
     font-family: Dancing;
@@ -619,7 +641,7 @@ header.small {
     animation: bounce 0.4s ease;
 }
 
-span.ellisse {
+.ellisse {
     height: 15px;
     width: 40px;
     border-radius: 50%;
@@ -810,6 +832,31 @@ figure.round {
     header.small {
         min-height: 20vh;
     }
+    footer {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    header.small {
+    min-height: 30vh;
+    }
+    section {
+        padding-top: 50px;
+    }
+    .routing, .about_foto_title {
+        padding-bottom: 50px;
+    }
+    #app {
+        padding: 50px 0px;
+    }
+    .arrows {
+        padding-top: 30px;
+    }
+    footer {
+        height: 250px;
+    }
+
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
@@ -848,13 +895,16 @@ figure.round {
         height: 1200px;
     }
     footer {
-        height: 25vh;  
+        height: 250px;  
     }
     .fab {
         font-size: 28px;
     }
     #button_menu {
         display: none;
+    }
+    footer {
+        height: 250px;
     }
 }
 /* Setting for iPad */
