@@ -32,8 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    button.addEventListener('click', (evt) => {
+    // event remove itself and add itself back when transition ends; 
+
+    const toggle_menu = () => {
         if (container.style.zIndex !== '10') {
+            button.removeEventListener('click', toggle_menu);
             container.style.zIndex = '10';
             let delay = 0.1;
             array_from_ul.forEach(e => {
@@ -41,8 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 delay = delay + 0.1;
                 e.classList.add('goes_in')
             })
+            setTimeout(function(){
+                button.addEventListener('click', toggle_menu);
+            }, delay*1000);
         }
         else if (container.style.zIndex === '10') {
+            button.removeEventListener('click', toggle_menu);
             let delay = 0.1;
             array_from_ul.forEach(e => {
                 e.style.transition = `${delay}s`;
@@ -52,7 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // console.log(delay)
             setTimeout(function(){
                 container.style.zIndex = '-2';
+                button.addEventListener('click', toggle_menu);
             }, delay*1000);
         }
-    })
+    }
+    button.addEventListener('click', toggle_menu);
 });
