@@ -3,7 +3,7 @@ import * as equal_height from '/javascript/equal_height.js';
 export const html = () => /*html*/ `
 <div class="about_foto_title square">
 <figure class="round rolling">
-    <img src="images/image_about.jpg" alt="">
+    <img src="images/awards.jpg" alt="">
 </figure>
 <div class="fade_in">
     <h2>Awards</h2>

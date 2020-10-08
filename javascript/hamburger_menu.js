@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         //e.style.opacity = '0.5';
     })
 
+    // removes menù by resizing 
+
     window.addEventListener('resize', () => {
             let width = window.innerWidth;
             // console.log(width);
@@ -32,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    // event remove itself and add itself back when transition ends; 
+    // event removes itself and adds itself back when transition ends; 
 
     const toggle_menu = () => {
         if (container.style.zIndex !== '10') {
