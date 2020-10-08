@@ -40,7 +40,7 @@
     left: calc(50% - 75px);
     width: 150px;
     height: 150px;
-    animation: rotate 5s infinite linear;
+    animation: rotate 7s infinite linear;
     z-index: 100;
     transform-origin: center;
 }
@@ -125,7 +125,7 @@ li p {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn_from_right_2 3.5s 1 ease;
+    animation: fadeIn_from_right_2 4s 1 ease;
     background-attachment: fixed;
     animation-delay: 2s;
 }
@@ -140,7 +140,7 @@ li p {
     grid-row-end: 8;
     z-index: 2;
     background-color: #BCBBBA;
-    animation: fadeIn 3.5s 1 ease;
+    animation: fadeIn 4s 1 ease;
     animation-delay: 2s;
 }
 @keyframes fadeIn {
@@ -154,7 +154,7 @@ li p {
     grid-row-end: 35;
     z-index: 0;
     background-color: #E1D5C7;
-    animation: scale 3s 1 ease;
+    animation: scale 3.5s 1 ease;
     transform-origin: left;
     animation-delay: 2s;
 }
@@ -170,7 +170,7 @@ li p {
     grid-row-end: 12;
     z-index: 2;
     background-color: #F2D2B5;
-    animation: appear 2.5s 1 ease;
+    animation: appear 3s 1 ease;
     animation-delay: 2s;
 }
 @keyframes appear {
@@ -184,7 +184,7 @@ li p {
     grid-row-end: 35;
     z-index: 3;
     background-color: #F2D2B5;
-    animation: appear 2.5s 1 ease;
+    animation: appear 3s 1 ease;
     animation-delay: 2s;
 }
 .rectangle_5 {
@@ -194,7 +194,7 @@ li p {
     grid-row-end: 35;
     z-index: 4;
     background-color: #F2D2B5;
-    animation: fadeIn_from_left 2.5s 1 ease;
+    animation: fadeIn_from_left 3s 1 ease;
     animation-delay: 2s;
 }
 @keyframes fadeIn_from_left {
@@ -208,7 +208,7 @@ li p {
     grid-row-end: 35;
     z-index: 5;
     background-color: #F2D2B5;
-    animation: fadeIn_from_right 2.5s 1 ease;
+    animation: fadeIn_from_right 3s 1 ease;
     animation-delay: 2s;
 }
 @keyframes fadeIn_from_right {
@@ -222,7 +222,7 @@ li p {
     grid-row-end: 6;
     z-index: 6;
     background-color: #F2D2B5;
-    animation: fadeIn_from_bottom 3.5s 1 ease;
+    animation: fadeIn_from_bottom 4s 1 ease;
     animation-delay: 2s;
 }
 @keyframes fadeIn_from_bottom {
@@ -239,7 +239,7 @@ li p {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    animation: fadeIn_from_left_2 3.5s 1 ease;
+    animation: fadeIn_from_left_2 4s 1 ease;
     animation-delay: 2s;
 }
 @keyframes fadeIn_from_left_2 {
