@@ -33,6 +33,9 @@
             <span></span>
             <span></span> 
         </div>
+        <div class="spinner-wrapper">
+            <div class="spinner"><img src="images/logo_mazzola.svg" alt=""></div>
+        </div>
      <nav id="hamb_menu">
          <ul>
              <div></div>
@@ -122,6 +125,21 @@
         </footer>
     </main>
     <!-- LIBRARIES VIA CDN -->
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                function hidePreloader() {
+                    const preloader = document.querySelector('.spinner-wrapper');
+                    setTimeout(function(){
+                    preloader.style.opacity = '0';
+                    setTimeout(function(){
+                    preloader.style.display = 'none';
+                    }, 2500);
+                    }, 2000);
+                }
+                hidePreloader();
+            });
+</script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
