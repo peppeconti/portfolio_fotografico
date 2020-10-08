@@ -817,6 +817,10 @@ figure.round {
 /* Setting for iPad Pro */
 
 @media screen and (max-width: 1024px) {
+    .background {
+        background: url(images/header_background_medium.jpg) no-repeat center center;
+        background-size: cover;
+    }
     .rectangle_2 {
         grid-column-end: 5;
     }
