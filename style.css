@@ -820,11 +820,12 @@ figure.round {
     .background {
         background: url(images/header_background_medium.jpg) no-repeat center center;
         background-size: cover;
+        background-attachment: fixed;
     }
     .rectangle_2 {
         grid-column-end: 5;
     }
-    nav#desktop {
+    #desktop nav {
         grid-column-start: 1;
         grid-column-end: 57;
         grid-row-start: 30;
@@ -833,9 +834,9 @@ figure.round {
         justify-content: center;
     }
     .nav {
-        display: none;
+        display: block;
     }
-    nav#desktop ul.social {
+    #desktop nav ul.social {
         flex-direction: row;
         grid-column-start: none;
         grid-column-end: none;
@@ -844,7 +845,7 @@ figure.round {
         justify-content: center;
         width: 100%;
     }
-    nav#desktop ul.social li {
+    #desktop nav ul.social li {
         padding: 0px 10px;
     }
     @keyframes fadeIn_from_right_2 {
