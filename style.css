@@ -127,6 +127,7 @@ li p {
     align-items: center;
     animation: fadeIn_from_right_2 3.5s 1 ease;
     background-attachment: fixed;
+    animation-delay: 2s;
 }
 @keyframes fadeIn_from_right_2 {
     0% {transform: translateX(10%);}
@@ -140,6 +141,7 @@ li p {
     z-index: 2;
     background-color: #BCBBBA;
     animation: fadeIn 3.5s 1 ease;
+    animation-delay: 2s;
 }
 @keyframes fadeIn {
     from {transform: translateY(-75%);}
@@ -154,6 +156,7 @@ li p {
     background-color: #E1D5C7;
     animation: scale 3s 1 ease;
     transform-origin: left;
+    animation-delay: 2s;
 }
 @keyframes scale {
     0% {transform: scaleX(0.8);}
@@ -168,6 +171,7 @@ li p {
     z-index: 2;
     background-color: #F2D2B5;
     animation: appear 2.5s 1 ease;
+    animation-delay: 2s;
 }
 @keyframes appear {
     from {opacity: 0}
@@ -181,6 +185,7 @@ li p {
     z-index: 3;
     background-color: #F2D2B5;
     animation: appear 2.5s 1 ease;
+    animation-delay: 2s;
 }
 .rectangle_5 {
     grid-column-start: 1;
@@ -190,6 +195,7 @@ li p {
     z-index: 4;
     background-color: #F2D2B5;
     animation: fadeIn_from_left 2.5s 1 ease;
+    animation-delay: 2s;
 }
 @keyframes fadeIn_from_left {
     from {transform: translateX(-75%);}
@@ -203,6 +209,7 @@ li p {
     z-index: 5;
     background-color: #F2D2B5;
     animation: fadeIn_from_right 2.5s 1 ease;
+    animation-delay: 2s;
 }
 @keyframes fadeIn_from_right {
     0% {transform: translateX(75%);}
@@ -216,6 +223,7 @@ li p {
     z-index: 6;
     background-color: #F2D2B5;
     animation: fadeIn_from_bottom 3.5s 1 ease;
+    animation-delay: 2s;
 }
 @keyframes fadeIn_from_bottom {
     0% {transform: translateY(25%);}
@@ -232,6 +240,7 @@ li p {
     align-items: center;
     padding: 40px;
     animation: fadeIn_from_left_2 3.5s 1 ease;
+    animation-delay: 2s;
 }
 @keyframes fadeIn_from_left_2 {
     0% {transform: translateX(-25%) translateY(20%); opacity: 0}
