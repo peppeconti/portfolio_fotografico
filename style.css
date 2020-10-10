@@ -292,7 +292,7 @@ nav#desktop {
     grid-column-end: 10;
     grid-row-start: 5;
     grid-row-end: 34;
-    z-index: 0;
+    z-index: 99;
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
